@@ -36,7 +36,12 @@
                                 </div>
                                 <div class="form-grup">
                                     <label>JENIS KELAMIN</label>
-                                    <input name="jk" class="form-control @error('jk') is-invalid @enderror">
+                                    <select name="jk" class="form-control @error('jk') is-invalid @enderror">
+                                        <option value="">Pilih Jenis Kelamin</option>
+                                        <option value="L">Laki-laki</option>
+                                        <option value="P">Perempuan</option>
+                                    </select>
+                                    {{-- <input name="jk" class="form-control @error('jk') is-invalid @enderror"> --}}
                                     <div class="text-danger">
                                         @error('jk')
                                             Jenis Kelamin Salah/Kosong

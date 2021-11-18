@@ -21,12 +21,21 @@
             <p>Penduduk</p>
           </a>
         </li>
+        @if (auth()->user()->level==1)
+        <li class="{{request()->is('wilayah')?'active': ''}}">
+            <a class="nav-link" href="/wilayah">
+              <i class="material-icons">map</i>
+              <p>Pengajuan</p>
+            </a>
+        </li>
+        @elseif (auth()->user()->level==2)
         <li class="{{request()->is('wilayah')?'active': ''}}">
             <a class="nav-link" href="/wilayah">
               <i class="material-icons">map</i>
               <p>Wilayah</p>
             </a>
         </li>
+        @endif
         <li class="{{request()->is('surat')?'active': ''}}">
             <a class="nav-link" href="/surat">
               <i class="material-icons">assignment</i>
