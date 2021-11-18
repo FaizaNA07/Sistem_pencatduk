@@ -21,7 +21,7 @@
                                     </select>
                                     <div class="text-danger">
                                         @error('id')
-                                            NIK Salah/Kosong
+                                            NIK Salah/Kosong/Sudah digunakan
                                         @enderror
                                     </div>
                                 </div>
