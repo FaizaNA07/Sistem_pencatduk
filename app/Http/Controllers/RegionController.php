@@ -128,6 +128,6 @@ class RegionController extends Controller
         $data = [
             'wilayah' => $this->WilayahModel->detailData($id_region),
         ];
-        return view('layout.mahasiswaDetail', $data);
+        return view('layout.detailWilayah', $data);
     }
 }

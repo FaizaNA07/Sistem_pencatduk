@@ -100,8 +100,8 @@
                                             <p>Yakin menghapus data {{ $data->nama }} ?</p>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">NO</button>
-                                            <a href="/wilayah/delete/{{ $data->id_region }}" class="btn btn-outline">YES</a>
+                                            <button type="button" class="btn btn-outline-secondary pull-left" data-dismiss="modal">NO</button>
+                                            <a href="/wilayah/delete/{{ $data->id_region }}" class="btn btn-danger">YES</a>
                                         </div>
                                     </div>
                                         <!-- /.modal-content -->
