@@ -127,6 +127,6 @@ class PendudukController extends Controller
         $data = [
             'penduduk' => $this->PendudukModel->detailData($id_penduduk),
         ];
-        return view('layout.mahasiswaDetail', $data);
+        return view('layout.detailPenduduk', $data);
     }
 }

@@ -35,6 +35,7 @@ Route::get('/penduduk/edit/{id_penduduk}', [PendudukController::class, 'edit']);
 Route::post('/penduduk/update/{id_penduduk}', [PendudukController::class, 'update']);
 Route::get('/penduduk/delete/{id_penduduk}', [PendudukController::class, 'delete']);
 Route::get('/penduduk/cari', [PendudukController::class, 'cari']);
+Route::get('/penduduk/detail/{id_penduduk}',[PendudukController::class, 'detail']);
 
 // Region
 Route::get('/wilayah', [RegionController::class, 'index'])->name('wilayah');
