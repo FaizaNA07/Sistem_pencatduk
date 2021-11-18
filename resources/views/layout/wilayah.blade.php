@@ -73,11 +73,13 @@
                                         <td>{{ $data->alasan }}</td>
                                         <td>{{ $data->tanggal }}</td>
                                         <td>
-                                            <a href="/wilayah/edit/{{ $data->id_region }}" class="btn btn-sm btn-warning">EDIT</a>
                                             @if (auth()->user()->level==1)
-                                            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delete{{ $data->id_region }}">
-                                                DELETE
-                                            </button>
+                                                <a href="/wilayah/detail/{{$data->id_region}}" class="btn btn-sm btn-info">DETAIL</a><br>
+                                                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delete{{ $data->id_region }}">
+                                                    DELETE
+                                                </button>
+                                            @elseif (auth()->user()->level==2)
+                                                <a href="/wilayah/edit/{{ $data->id_region }}" class="btn btn-sm btn-warning">EDIT</a>
                                             @endif
                                         </td>
                                     </tr>
