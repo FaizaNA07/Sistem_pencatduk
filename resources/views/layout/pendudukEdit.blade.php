@@ -34,8 +34,8 @@
                                 <div class="form-grup">
                                     <label>JENIS KELAMIN</label>
                                     <select name="jk" id="jk"class="form-control @error('jk') is-invalid @enderror" value="{{$penduduk->jk}}">
-                                        <option value="Laki-Laki">Laki-Laki</option>
-                                        <option value="Perempuan">Perempuan</option>
+                                        <option value="L">Laki-Laki</option>
+                                        <option value="P">Perempuan</option>
                                     </select>
                                     {{-- <input name="jk" class="form-control @error('jk') is-invalid @enderror" value="{{$penduduk->jk}}"> --}}
                                     <div class="text-danger">
