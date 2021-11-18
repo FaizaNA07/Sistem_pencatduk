@@ -21,6 +21,7 @@ class CreateRegionsTable extends Migration
             $table->string('kecamatan');
             $table->text('alasan');
             $table->date('tanggal');
+            $table->integer('status');
             $table->timestamps();
         });
     }
