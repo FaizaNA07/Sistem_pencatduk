@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\PendudukModel;
+use App\Models\User;
 use App\Models\WilayahModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -21,11 +22,13 @@ class RegionController extends Controller
     {
         $this->WilayahModel = new WilayahModel();
         $this->PendudukModel = new PendudukModel();
+        $this->User = new User();
     }
 
     // Add data
     public function add(){
         $data = [
+            'user' => $this->User->allData(),
             'wilayah' => $this->WilayahModel->tambah(),
             'penduduk' => $this->PendudukModel->allData(),
         ];

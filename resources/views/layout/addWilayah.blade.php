@@ -15,11 +15,11 @@
                                 @csrf
                                 <div class="form-grup">
                                     <label>NAMA PENDUDUK</label>
-                                    {{-- <input name="nama" class="form-control @error('nama') is-invalid @enderror"> --}}
-                                    <select name="id_penduduk" class="form-control @error('id_penduduk') is-invalid @enderror">
-                                        <option value="">Pilih Penduduk</option>
+                                    <select name="id_penduduk" class="form-control @error('id_penduduk') is-invalid @enderror" readonly>
                                         @foreach ($penduduk as $data)
-                                            <option value="{{$data->id_penduduk}}">{{$data->nama}} - {{$data->nik}}</option>
+                                            @if ($data->nik == Auth::user()->nik)
+                                                <option value="{{$data->id_penduduk}}">{{$data->nik}}-{{$data->name}}</option>
+                                            @endif
                                         @endforeach
                                         </select>
                                     <div class="text-danger">
