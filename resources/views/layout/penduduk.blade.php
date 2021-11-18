@@ -71,12 +71,13 @@
                                             <td>{{ $data->alamat }}</td>
                                             <td><img src="{{ url('foto_ktp/'.$data->foto) }}" width="100px"></td>
                                             <td>
-                                                <a href="/penduduk/edit/{{ $data->id_penduduk }}" class="btn btn-sm btn-warning">EDIT</a><br>
                                                 @if (auth()->user()->level==1)
                                                 <a href="/penduduk/detail/{{ $data->id_penduduk }}" class="btn btn-sm btn-info">DETAIL</a><br>
                                                 <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delete{{ $data->id_penduduk }}">
                                                     DELETE
                                                 </button>
+                                                @elseif (auth()->user()->level==2)
+                                                <a href="/penduduk/edit/{{ $data->id_penduduk }}" class="btn btn-sm btn-warning">EDIT</a>
                                                 @endif
                                             </td>
                                         </tr>
