@@ -25,7 +25,7 @@
         <li class="{{request()->is('wilayah')?'active': ''}}">
             <a class="nav-link" href="/wilayah">
               <i class="material-icons">map</i>
-              <p>Pengajuan</p>
+              <p>Perizinan</p>
             </a>
         </li>
         @elseif (auth()->user()->level==2)
@@ -35,13 +35,13 @@
               <p>Wilayah</p>
             </a>
         </li>
-        @endif
         <li class="{{request()->is('surat')?'active': ''}}">
             <a class="nav-link" href="/surat">
               <i class="material-icons">assignment</i>
               <p>Cetak Surat</p>
             </a>
-          </li>
+        </li>
+        @endif
         {{-- <li class="{{request()->is('table')?'active': ''}}">
           <a class="nav-link" href="/table">
             <i class="material-icons">view_list</i>

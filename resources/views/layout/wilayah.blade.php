@@ -25,7 +25,11 @@
 
             <div class="card">
                 <div class="card-header card-header-primary">
+                    @if (auth()->user()->level==1)
+                    <h4 class="card-title ">PERIZINAN</h4>
+                    @elseif (auth()->user()->level==2)
                     <h4 class="card-title ">WILAYAH</h4>
+                    @endif
                     {{-- <p class="card-category"> Here is a subtitle for this table</p> --}}
                 </div>
                 <div class="card-body">
@@ -57,6 +61,9 @@
                                 Tanggal
                               </th>
                               <th>
+                                  Status
+                              </th>
+                              <th>
                                 Action
                               </th>
                             </thead>
@@ -72,6 +79,13 @@
                                         <td>{{ $data->kecamatan }}</td>
                                         <td>{{ $data->alasan }}</td>
                                         <td>{{ $data->tanggal }}</td>
+                                        @if ($data->status == 1)
+                                            <td class="btn btn-warning text-sm-center">Pending</td>
+                                        @elseif ($data->status == 2)
+                                            <td  class="btn btn-success text-sm-center">Diterima</td>
+                                        @elseif ($data->status == 3)
+                                            <td class="btn btn-danger text-sm-center">Ditolak</td>
+                                        @endif
                                         <td>
                                             @if (auth()->user()->level==1)
                                                 <a href="/wilayah/detail/{{$data->id_region}}" class="btn btn-sm btn-info">DETAIL</a><br>
