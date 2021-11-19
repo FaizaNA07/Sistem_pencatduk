@@ -146,17 +146,4 @@ class RegionController extends Controller
         return redirect()->route('wilayah')->with('pesan','Izin Berhasil Diperbarui');
     }
 
-        // Simpan Izin
-        public function simpanIzin(){
-            Request()->validate([
-                'status' => 'required',
-            ]);
-
-            $data = [
-                'status' => Request()->status,
-            ];
-
-            $this->WilayahModel->addData($data);
-            return redirect()->route('wilayah')->with('pesan','Izin Berhasil Ditambahkan');
-        }
 }

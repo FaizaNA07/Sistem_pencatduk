@@ -41,12 +41,12 @@ Route::get('/penduduk/detail/{id_penduduk}',[PendudukController::class, 'detail'
 Route::get('/wilayah', [RegionController::class, 'index'])->name('wilayah');
 Route::get('/wilayah/add', [RegionController::class, 'add']);
 Route::post('/wilayah/simpan', [RegionController::class, 'simpan']);
-Route::get('/wilayah/edit/{id_wilayah}', [RegionController::class, 'edit']);
-Route::post('/wilayah/update/{id_wilayah}', [RegionController::class, 'update']);
-Route::get('/wilayah/delete/{id_wilayah}', [RegionController::class, 'delete']);
+Route::get('/wilayah/edit/{id_region}', [RegionController::class, 'edit']);
+Route::post('/wilayah/update/{id_region}', [RegionController::class, 'update']);
+Route::get('/wilayah/delete/{id_region}', [RegionController::class, 'delete']);
 Route::get('/wilayah/cari', [RegionController::class, 'cari']);
-Route::get('/wilayah/detail/{id_wilayah}', [RegionController::class, 'detail']);
-Route::post('/wilayah/izin/{id_wilayah}', [RegionController::class, 'izin']);
+Route::get('/wilayah/detail/{id_region}', [RegionController::class, 'detail']);
+Route::post('/wilayah/izin/{id_region}', [RegionController::class, 'izin']);
 
 
 // Table

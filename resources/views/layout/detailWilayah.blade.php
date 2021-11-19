@@ -50,6 +50,8 @@
                                             <th class="text-warning">Pending</th>
                                         @elseif ($wilayah->status == 2)
                                             <th class="text-success">Diterima</th>
+                                            @elseif ($wilayah->status == 3)
+                                            <th class="text-danger">Ditolak</th>
                                         @endif
                                     </tr>
                                 </table>
@@ -60,10 +62,8 @@
                             <form action="/wilayah/izin/{{$wilayah->id_region}}" method="POST" >
                                 <div>
                                     @csrf
-                                    {{-- <p><input type="hidden" name="status" value="{{$wilayah->status==2}}"></p> --}}
-                                    {{-- <input type="submit" name="status" class="btn btn-success pull-right" value="ACC">
-                                    {{-- <input name="status" class="form-control @error('status') is-invalid @enderror" value="{{$wilayah->status==2}}"> --}}
-                                    <button type="submit" class="btn btn-success pull-right" name="status" value="2">ACC</button>
+                                    <button type="submit" class="btn btn-success pull-center" name="status" value="2">ACC</button>
+                                    <button type="submit" class="btn btn-danger pull-center" name="status" value="3">Cencel</button>
                                 </div>
                             </form>
                         </div>
