@@ -93,7 +93,9 @@
                                                     DELETE
                                                 </button>
                                             @elseif (auth()->user()->level==2)
-                                                <a href="/wilayah/edit/{{ $data->id_region }}" class="btn btn-sm btn-warning">EDIT</a>
+                                                @if ($data->nama == Auth::user()->name )
+                                                    <a href="/wilayah/edit/{{ $data->id_region }}" class="btn btn-sm btn-warning">EDIT</a>
+                                                @endif
                                             @endif
                                         </td>
                                     </tr>

@@ -27,7 +27,9 @@
                                 </div>
                                 <div class="form-grup">
                                     <label>NAMA LENGKAP</label>
-                                    <input name="nama" class="form-control @error('nama') is-invalid @enderror">
+                                    <select name="nama" class="form-control @error('nama') is-invalid @enderror" readonly>
+                                        <option value="{{ Auth::user()->name }}">{{ Auth::user()->name }}</option>
+                                    </select>
                                     <div class="text-danger">
                                         @error('nama')
                                             Nama Salah/Kosong
