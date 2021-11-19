@@ -43,9 +43,27 @@
                                         <th width="30px">:</th>
                                         <th>{{$wilayah->alasan}}</th>
                                     </tr>
+                                    <tr>
+                                        <th width="100px">Status</th>
+                                        <th width="30px">:</th>
+                                        @if ($wilayah->status == 1)
+                                            <th class="text-warning">Pending</th>
+                                        @elseif ($wilayah->status == 2)
+                                            <th class="text-success">Diterima</th>
+                                        @endif
+                                    </tr>
                                 </table>
                                 <div class="form-group">
                                     <button class="btn btn-primary pull-right">Kembali</button>
+                                </div>
+                            </form><br><br>
+                            <form action="/wilayah/izin/{{$wilayah->id_region}}" method="POST" >
+                                <div>
+                                    @csrf
+                                    {{-- <p><input type="hidden" name="status" value="{{$wilayah->status==2}}"></p> --}}
+                                    {{-- <input type="submit" name="status" class="btn btn-success pull-right" value="ACC">
+                                    {{-- <input name="status" class="form-control @error('status') is-invalid @enderror" value="{{$wilayah->status==2}}"> --}}
+                                    <button type="submit" class="btn btn-success pull-right" name="status" value="2">ACC</button>
                                 </div>
                             </form>
                         </div>

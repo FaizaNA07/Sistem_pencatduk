@@ -130,4 +130,33 @@ class RegionController extends Controller
         ];
         return view('layout.detailWilayah', $data);
     }
+
+    // Perizinan
+    public function izin($id_region)
+    {
+        Request()->validate([
+            'status' => 'required',
+        ]);
+
+        $data = [
+            'status' => Request()->status,
+        ];
+
+        $this->WilayahModel->editData($id_region ,$data);
+        return redirect()->route('wilayah')->with('pesan','Izin Berhasil Diperbarui');
+    }
+
+        // Simpan Izin
+        public function simpanIzin(){
+            Request()->validate([
+                'status' => 'required',
+            ]);
+
+            $data = [
+                'status' => Request()->status,
+            ];
+
+            $this->WilayahModel->addData($data);
+            return redirect()->route('wilayah')->with('pesan','Izin Berhasil Ditambahkan');
+        }
 }

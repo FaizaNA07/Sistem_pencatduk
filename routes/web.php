@@ -46,6 +46,8 @@ Route::post('/wilayah/update/{id_wilayah}', [RegionController::class, 'update'])
 Route::get('/wilayah/delete/{id_wilayah}', [RegionController::class, 'delete']);
 Route::get('/wilayah/cari', [RegionController::class, 'cari']);
 Route::get('/wilayah/detail/{id_wilayah}', [RegionController::class, 'detail']);
+Route::post('/wilayah/izin/{id_wilayah}', [RegionController::class, 'izin']);
+
 
 // Table
 Route::get('/surat', [SuratController::class, 'index'])->name('surat');
