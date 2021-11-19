@@ -63,7 +63,7 @@
                                 <div>
                                     @csrf
                                     <button type="submit" class="btn btn-success pull-center" name="status" value="2">ACC</button>
-                                    <button type="submit" class="btn btn-danger pull-center" name="status" value="3">Cencel</button>
+                                    {{-- <button type="submit" class="btn btn-danger pull-center" name="status" value="3">Cencel</button> --}}
                                 </div>
                             </form>
                         </div>

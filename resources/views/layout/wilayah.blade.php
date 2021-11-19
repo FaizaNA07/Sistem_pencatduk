@@ -80,9 +80,9 @@
                                         <td>{{ $data->alasan }}</td>
                                         <td>{{ $data->tanggal }}</td>
                                         @if ($data->status == 1)
-                                            <td class="btn btn-warning text-sm-center">Pending</td>
+                                            <td class="btn btn-rose text-sm-center">Pending</td>
                                         @elseif ($data->status == 2)
-                                            <td  class="btn btn-success text-sm-center">Diterima</td>
+                                            <td class="btn btn-success text-sm-center">Diterima</td>
                                         @elseif ($data->status == 3)
                                             <td class="btn btn-danger text-sm-center">Ditolak</td>
                                         @endif
