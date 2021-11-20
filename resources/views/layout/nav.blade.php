@@ -25,7 +25,7 @@
         <li class="{{request()->is('wilayah')?'active': ''}}">
             <a class="nav-link" href="/wilayah">
               <i class="material-icons">map</i>
-              <p>Perizinan</p>
+              <p class=" bt">Perizinan</p>
             </a>
         </li>
         @elseif (auth()->user()->level==2)

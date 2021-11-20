@@ -10,7 +10,9 @@
         <div class="card-body">
             <h6>jkdbakjbcekfugabcka</h6>
         </div>
-        <a href="/surat/cetakSKTS" target="_blank" class="btn btn-primary btn-round">Cetak SKTS</a>
+        <a href="/surat/cetakSKTS" target="_blank" class="d-flex justify-content-center">
+            <button type="button" class="btn btn-success btn-round"><i class="material-icons">printer</i>Cetak SKTS</button>
+        </a>
     </div><br>
     <div class="card">
         <div class="card-header card-header-primary">
@@ -19,10 +21,9 @@
         <div class="card-body">
             <h6>jkdbakjbcekfugabcka</h6>
         </div>
-        {{-- <div class="form-group">
-            <button class="btn btn-primary btn-round">Simpan</button>
-        </div> --}}
-        <a href="/surat/cetakSKDS" target="_blank" class="btn btn-primary btn-round">Cetak SKDS</a>
+        <a href="/surat/cetakSKDS" target="_blank" class="d-flex justify-content-center">
+            <button type="button" class="btn btn-success btn-round"><i class="material-icons">printer</i>Cetak SKDS</button>
+        </a>
     </div>
 </div>
 
