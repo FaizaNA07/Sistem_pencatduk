@@ -80,11 +80,17 @@
                                         <td>{{ $data->alasan }}</td>
                                         <td>{{ $data->tanggal }}</td>
                                         @if ($data->status == 1)
-                                            <td class="btn btn-rose text-sm-center">Pending</td>
+                                            <td>
+                                                <a class="btn btn-rose btn-sm text-white">Pending</a>
+                                            </td>
                                         @elseif ($data->status == 2)
-                                            <td class="btn btn-success text-sm-center">Diterima</td>
+                                            <td>
+                                                <a class="btn btn-success btn-sm text-white">Diterima</a>
+                                            </td>
                                         @elseif ($data->status == 3)
-                                            <td class="btn btn-danger text-sm-center">Ditolak</td>
+                                            <td>
+                                                <a class="btn btn-danger btn-sm">Ditolak</a>
+                                            </td>
                                         @endif
                                         <td>
                                             @if (auth()->user()->level==1)
