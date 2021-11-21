@@ -27,7 +27,9 @@
 
                 <div class="card">
                     <div class="card-header card-header-primary">
-                        <h4 class="card-title ">PENDUDUK</h4>
+                        <h4 class="card-title ">
+                            PENDUDUK
+                        </h4>
                         {{-- <p class="card-category"> Here is a subtitle for this table</p> --}}
                     </div>
                     <div class="card-body">
