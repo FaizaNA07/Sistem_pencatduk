@@ -51,3 +51,5 @@ Route::post('/wilayah/izin/{id_region}', [RegionController::class, 'izin']);
 
 // Table
 Route::get('/surat', [SuratController::class, 'index'])->name('surat');
+Route::get('/surat/cetakSKTS', [SuratController::class, 'printSKTS']);
+Route::get('/surat/cetakSKDS', [SuratController::class, 'printSKDS']);
